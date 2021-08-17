@@ -25,5 +25,32 @@
 
 <router-outlet></router-outlet>
 
+
+<div class="table">
+
+<table>
+
+<tr>
+
+<th>USER ID</th>
+<th>MAIN ID</th>
+<th>TITLE</th>
+<th>WORK COMPLETED</th>
+
+</tr>
+
+<tr *ngFor = "let Data of storeData" class="myTable">
+
+<td>{{Data.userId}}</td>
+<td>{{Data.id}}</td>
+<td>{{Data.title}}</td>
+<td>{{Data.completed}}</td>
+
+</tr>
+
+</table>
+
+</div>
+
 </body>
 </html>

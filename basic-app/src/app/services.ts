@@ -2,7 +2,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-@Injectable()
+@Injectable(
+
+    {
+
+        providedIn : 'root'
+
+    }
+
+)
 
 export class servicesClass
 {
@@ -19,11 +27,11 @@ return this.mySpecialData;
 constructor(private http : HttpClient)
 {}
 
-// showData()
-// {
+showData()
+{
 
-// var showOurData=this.http.get("https://jsonplaceholder.typicode.com/todos/").subscribe(data =>{});
+return this.http.get("https://jsonplaceholder.typicode.com/todos/");
 
-// }
+}
 
 }
